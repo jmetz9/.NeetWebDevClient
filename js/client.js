@@ -3,6 +3,9 @@ $(function () {
     var toast = new Audio('media/toast.wav');
     $('.code').on('click', function (e) {
         e.preventDefault();
+        //alert($(this).data('code'));
+        $('#code').html($(this).data('code'));
+        $('#product').html($(this).data('product'));
         // first pause the audio (in case it is still playing)
         toast.pause();
         // reset the audio
